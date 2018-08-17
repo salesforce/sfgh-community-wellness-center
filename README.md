@@ -36,6 +36,8 @@ Follow standard SFDX instructions: https://developer.salesforce.com/tools/sfdxcl
 ## Acknowledgements
 
 Special thanks to those who volunteered to build and maintain this project: 
+Nasrin Aboudamous
+Andrey Falko
 Ryan Lamore
 Nari Mulakala
 Trevor Bliss
