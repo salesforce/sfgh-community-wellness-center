@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2018, salesforce.com, inc.
+  ~ All rights reserved.
+  ~ Licensed under the BSD 3-Clause license.
+  ~ For full license text, see LICENSE.txt file in the repo root or
+  ~ https://opensource.org/licenses/BSD-3-Clause
+  -->
+
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Race__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>種族/族裔
+Raza/ Etnia</inlineHelpText>
+    <label>Race/Ethnicity</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>true</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Prefer not to say</fullName>
+                <default>true</default>
+                <label>Prefer not to say</label>
+            </value>
+            <value>
+                <fullName>African American/African</fullName>
+                <default>false</default>
+                <label>African American/African</label>
+            </value>
+            <value>
+                <fullName>Asian/Pacific Islander</fullName>
+                <default>false</default>
+                <label>Asian/Pacific Islander</label>
+            </value>
+            <value>
+                <fullName>Caucasian</fullName>
+                <default>false</default>
+                <label>Caucasian</label>
+            </value>
+            <value>
+                <fullName>Latino/Chicano</fullName>
+                <default>false</default>
+                <label>Latino/Chicano</label>
+            </value>
+            <value>
+                <fullName>Native American</fullName>
+                <default>false</default>
+                <label>Native American</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

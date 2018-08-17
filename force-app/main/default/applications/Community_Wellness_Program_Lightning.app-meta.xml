@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2018, salesforce.com, inc.
+  ~ All rights reserved.
+  ~ Licensed under the BSD 3-Clause license.
+  ~ For full license text, see LICENSE.txt file in the repo root or
+  ~ https://opensource.org/licenses/BSD-3-Clause
+  -->
+
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#1589EE</headerColor>
+    </brand>
+    <description>Community Wellness Program</description>
+    <formFactors>Large</formFactors>
+    <label>Community Wellness Program Lightning</label>
+    <navType>Standard</navType>
+    <tab>Sign_In</tab>
+    <tab>Register</tab>
+    <tab>Participant__c</tab>
+    <tab>Satisfaction_Survey__c</tab>
+    <tab>Class__c</tab>
+    <tab>Attendance__c</tab>
+    <tab>standard-report</tab>
+    <tab>standard-Dashboard</tab>
+    <tab>standard-home</tab>
+    <uiType>Lightning</uiType>
+</CustomApplication>

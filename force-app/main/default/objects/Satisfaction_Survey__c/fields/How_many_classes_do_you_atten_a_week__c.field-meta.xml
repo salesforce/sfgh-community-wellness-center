@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2018, salesforce.com, inc.
+  ~ All rights reserved.
+  ~ Licensed under the BSD 3-Clause license.
+  ~ For full license text, see LICENSE.txt file in the repo root or
+  ~ https://opensource.org/licenses/BSD-3-Clause
+  -->
+
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_many_classes_do_you_atten_a_week__c</fullName>
+    <description>How many classes do you usually attend per week?</description>
+    <externalId>false</externalId>
+    <label>How many classes per week?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0-1 class per week</fullName>
+                <default>false</default>
+                <label>0-1 class per week</label>
+            </value>
+            <value>
+                <fullName>1-2 classes per week</fullName>
+                <default>false</default>
+                <label>1-2 classes per week</label>
+            </value>
+            <value>
+                <fullName>3-4 classes per week</fullName>
+                <default>false</default>
+                <label>3-4 classes per week</label>
+            </value>
+            <value>
+                <fullName>5 or more classes per week</fullName>
+                <default>false</default>
+                <label>5 or more classes per week</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

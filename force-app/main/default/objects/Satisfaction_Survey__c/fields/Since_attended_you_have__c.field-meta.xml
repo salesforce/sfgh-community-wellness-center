@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2018, salesforce.com, inc.
+  ~ All rights reserved.
+  ~ Licensed under the BSD 3-Clause license.
+  ~ For full license text, see LICENSE.txt file in the repo root or
+  ~ https://opensource.org/licenses/BSD-3-Clause
+  -->
+
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Since_attended_you_have__c</fullName>
+    <description>How have you benefited form attending the WOW classes?</description>
+    <externalId>false</externalId>
+    <label>Since attended you have</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lost weight</fullName>
+                <default>false</default>
+                <label>Lost weight</label>
+            </value>
+            <value>
+                <fullName>Gained more energy and focus</fullName>
+                <default>false</default>
+                <label>Gained more energy and focus</label>
+            </value>
+            <value>
+                <fullName>Lowered my blood glucose levels</fullName>
+                <default>false</default>
+                <label>Lowered my blood glucose levels</label>
+            </value>
+            <value>
+                <fullName>Cooked healthier meals</fullName>
+                <default>false</default>
+                <label>Cooked healthier meals</label>
+            </value>
+            <value>
+                <fullName>Management my health condition better</fullName>
+                <default>false</default>
+                <label>Management my health condition better</label>
+            </value>
+            <value>
+                <fullName>Gained friends and allies in the hospital</fullName>
+                <default>false</default>
+                <label>Gained friends and allies in the hospital</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

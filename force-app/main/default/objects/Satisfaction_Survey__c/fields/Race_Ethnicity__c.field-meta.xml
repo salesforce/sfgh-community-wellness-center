@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2018, salesforce.com, inc.
+  ~ All rights reserved.
+  ~ Licensed under the BSD 3-Clause license.
+  ~ For full license text, see LICENSE.txt file in the repo root or
+  ~ https://opensource.org/licenses/BSD-3-Clause
+  -->
+
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Race_Ethnicity__c</fullName>
+    <externalId>false</externalId>
+    <label>Race/Ethnicity</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>African American</fullName>
+                <default>false</default>
+                <label>African American</label>
+            </value>
+            <value>
+                <fullName>Asian</fullName>
+                <default>false</default>
+                <label>Asian</label>
+            </value>
+            <value>
+                <fullName>Latino</fullName>
+                <default>false</default>
+                <label>Latino</label>
+            </value>
+            <value>
+                <fullName>Native America</fullName>
+                <default>false</default>
+                <label>Native America</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>White</fullName>
+                <default>false</default>
+                <label>White</label>
+            </value>
+            <value>
+                <fullName>Not Disclosed</fullName>
+                <default>true</default>
+                <label>Not Disclosed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

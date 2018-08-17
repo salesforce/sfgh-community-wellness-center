@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2018, salesforce.com, inc.
+  ~ All rights reserved.
+  ~ Licensed under the BSD 3-Clause license.
+  ~ For full license text, see LICENSE.txt file in the repo root or
+  ~ https://opensource.org/licenses/BSD-3-Clause
+  -->
+
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Age__c</fullName>
+    <externalId>false</externalId>
+    <label>Age</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Under 18</fullName>
+                <default>false</default>
+                <label>Under 18</label>
+            </value>
+            <value>
+                <fullName>18-40</fullName>
+                <default>false</default>
+                <label>18-40</label>
+            </value>
+            <value>
+                <fullName>41-64</fullName>
+                <default>false</default>
+                <label>41-64</label>
+            </value>
+            <value>
+                <fullName>65+</fullName>
+                <default>false</default>
+                <label>65+</label>
+            </value>
+            <value>
+                <fullName>Not Disclosed</fullName>
+                <default>true</default>
+                <label>Not Disclosed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2018, salesforce.com, inc.
+  ~ All rights reserved.
+  ~ Licensed under the BSD 3-Clause license.
+  ~ For full license text, see LICENSE.txt file in the repo root or
+  ~ https://opensource.org/licenses/BSD-3-Clause
+  -->
+
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referral_Source__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>你是怎麼知道ZSFG的？
+¿Cómo supo acerca del hospital ZSFG?</inlineHelpText>
+    <label>How did you hear about the Wellness Ctr</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Provider</fullName>
+                <default>true</default>
+                <label>Provider (i.e. doctor)</label>
+            </value>
+            <value>
+                <fullName>E-referral/Healthy Hearts</fullName>
+                <default>false</default>
+                <label>E-referral/Healthy Hearts</label>
+            </value>
+            <value>
+                <fullName>Community member</fullName>
+                <default>false</default>
+                <label>Staff/Community member</label>
+            </value>
+            <value>
+                <fullName>Flyers</fullName>
+                <default>false</default>
+                <label>Flyers</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>The Holler(Hospital Newsletter)</fullName>
+                <default>false</default>
+                <label>The Holler(Hospital Newsletter)</label>
+            </value>
+            <value>
+                <fullName>Wellness Event(i.e. Summer Fest)</fullName>
+                <default>false</default>
+                <label>Wellness Event (i.e. Summer Fest)</label>
+            </value>
+            <value>
+                <fullName>Walked by the Center</fullName>
+                <default>false</default>
+                <label>Walked by the Center</label>
+            </value>
+            <value>
+                <fullName>Support/Education Group</fullName>
+                <default>false</default>
+                <label>Support/Education Group</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other/Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

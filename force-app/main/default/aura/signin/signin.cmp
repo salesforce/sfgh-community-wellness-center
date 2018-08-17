@@ -1,0 +1,75 @@
+<aura:component controller="AttendeeController" implements="flexipage:availableForAllPageTypes">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="firstName" type="String" />
+    <aura:attribute name="lastName" type="String" />
+    <aura:attribute name="phoneNumber" type="String" />
+    <aura:attribute name="email" type="String" />
+    <aura:attribute name="classes" type="Class__c[]" />
+    <aura:attribute name="selectedClass" type="String"/>
+    <div class="container">
+        <h1>Welcome to the Community Wellness Program! Please sign in for your wellness class.</h1>
+    	<form class="slds-form--stacked">
+      		<div class="slds-form-element slds-is-required">
+        		<div class="slds-form-element__control">
+                    <ui:inputSelect class="single" aura:id="classSelection" label="Select the class you are attending" change="{!c.onSelectChange}">
+        				<aura:iteration items="{!v.classes}" var="clazz">
+        						<ui:inputSelectOption text="{!clazz.Id}" label="{!clazz.Name}"/>
+       					</aura:iteration>
+    			    </ui:inputSelect>
+
+                    <ui:inputText aura:id="firstNameInput" label="First Name"
+                        class="slds-input"
+                        labelClass="slds-form-element__label"
+                        value="{!v.firstName}"    
+                        required="true"
+                        placeholder="First Name"
+                        keyup="{!c.onKeyup}"/>
+                    
+                    <ui:inputText aura:id="lastNameInput" label="Last Name"
+                        class="slds-input"
+                        labelClass="slds-form-element__label"
+                        value="{!v.lastName}"
+                        required="false"
+                        placeholder="Last Name"
+                        keyup="{!c.onKeyup}"/>
+
+                    <ui:inputText aura:id="phoneNumberInput" label="Phone Number"
+                        class="slds-input"
+                        labelClass="slds-form-element__label"
+                        value="{!v.phoneNumber}"    
+                        required="false"
+                        placeholder="XXX-XXX-XXXX"
+                        keyup="{!c.onKeyup}"/>
+                    
+                    <ui:inputText aura:id="emailInput" label="Email"
+                        class="slds-input"
+                        labelClass="slds-form-element__label"
+                        value="{!v.email}"
+                        required="false"
+                        placeholder="name@example.com"
+                        keyup="{!c.onKeyup}"/>
+         		
+                    <ui:button label="Submit" 
+                        class="slds-button slds-button--neutral"
+                        labelClass="label"
+                        press="{!c.doLogin}"/>
+                </div>
+       		</div>
+        </form>
+        
+        <lightning:spinner class="slds-hide" aura:id="spinner"/>
+
+		<div id="myModal" class="modal">
+            <div id="myModal" class="modal-content">
+              <div class="modal-header">
+                <span class="modalClose">&times;</span>
+                <p id="modalHeader">Modal Header</p>
+              </div>
+              <div class="modal-body">
+                <p id="modalContent">Modal Body</p>
+              </div>
+            </div>
+        </div>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</aura:component>

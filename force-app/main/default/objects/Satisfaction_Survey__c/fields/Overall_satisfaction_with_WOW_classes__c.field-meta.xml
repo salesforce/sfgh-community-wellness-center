@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2018, salesforce.com, inc.
+  ~ All rights reserved.
+  ~ Licensed under the BSD 3-Clause license.
+  ~ For full license text, see LICENSE.txt file in the repo root or
+  ~ https://opensource.org/licenses/BSD-3-Clause
+  -->
+
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overall_satisfaction_with_WOW_classes__c</fullName>
+    <externalId>false</externalId>
+    <label>Overall satisfaction with WOW classes</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Very satisfied</fullName>
+                <default>false</default>
+                <label>Very satisfied</label>
+            </value>
+            <value>
+                <fullName>Satisfied</fullName>
+                <default>false</default>
+                <label>Satisfied</label>
+            </value>
+            <value>
+                <fullName>Unsatisfied</fullName>
+                <default>false</default>
+                <label>Unsatisfied</label>
+            </value>
+            <value>
+                <fullName>Very unsatisfied</fullName>
+                <default>false</default>
+                <label>Very unsatisfied</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2018, salesforce.com, inc.
+  ~ All rights reserved.
+  ~ Licensed under the BSD 3-Clause license.
+  ~ For full license text, see LICENSE.txt file in the repo root or
+  ~ https://opensource.org/licenses/BSD-3-Clause
+  -->
+
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Benefits_for_participating__c</fullName>
+    <externalId>false</externalId>
+    <label>Benefits for participating</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Relieve Stress</fullName>
+                <default>false</default>
+                <label>Relieve Stress</label>
+            </value>
+            <value>
+                <fullName>Meet People</fullName>
+                <default>false</default>
+                <label>Meet People</label>
+            </value>
+            <value>
+                <fullName>Less Pain</fullName>
+                <default>false</default>
+                <label>Less Pain</label>
+            </value>
+            <value>
+                <fullName>Less Anxiety/Depression</fullName>
+                <default>false</default>
+                <label>Less Anxiety/Depression</label>
+            </value>
+            <value>
+                <fullName>Strengthen Bonds</fullName>
+                <default>false</default>
+                <label>Strengthen Bonds</label>
+            </value>
+            <value>
+                <fullName>Have Fun</fullName>
+                <default>false</default>
+                <label>Have Fun</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>7</visibleLines>
+</CustomField>

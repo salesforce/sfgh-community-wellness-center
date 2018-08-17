@@ -1,0 +1,195 @@
+<aura:component controller="CreateParticipantController" implements="flexipage:availableForAllPageTypes">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="firstName" type="String" />
+    <aura:attribute name="lastName" type="String" />
+    <aura:attribute name="fullName" type="String" />
+    <aura:attribute name="phoneNumber" type="String" />
+    <aura:attribute name="email" type="String" />
+    <aura:attribute name="dateOfBirth" type="Date" />
+    <aura:attribute name="streetAddr" type="String" />
+    <aura:attribute name="city" type="String" default="San Francisco"/>
+    <aura:attribute name="state" type="String" default="California"/>
+    <aura:attribute name="zipcode" type="Integer"/>
+    <aura:attribute name="emergencyContactFullName" type="String" />
+    <aura:attribute name="emergencyContactPhoneNumber" type="String" />
+    <aura:attribute name="healthConditionImprove" type="String"/>
+
+    <aura:attribute name="genders" type="String[]"/>
+    <aura:attribute name="selectedGender" type="String"/>
+    <aura:attribute name="races" type="String[]"/>
+    <aura:attribute name="selectedRace" type="String"/>
+    <aura:attribute name="existingHealthConditions" type="String[]"/>
+    <aura:attribute name="selectedExistingHealthCondition" type="String"/>
+    <aura:attribute name="anyHealthConditions" type="String[]"/>
+    <aura:attribute name="selectedAnyHealthCondition" type="String"/>
+    <aura:attribute name="referralSources" type="String[]"/>
+    <aura:attribute name="selectedReferralSource" type="String"/>
+    <aura:attribute name="exerciseLevels" type="String[]"/>
+    <aura:attribute name="selectedExerciseLevel" type="String"/>
+    <aura:attribute name="participantPositions" type="String[]"/>
+    <aura:attribute name="selectedParticipantPosition" type="String"/>
+    <aura:attribute name="preferredLanguages" type="String[]"/>
+    <aura:attribute name="selectedPreferredLanguage" type="String"/>
+    <aura:attribute name="enjoyableActivities" type="String[]"/>
+    <aura:attribute name="selectedEnjoyableActivity" type="String"/>
+    
+    <div class="container">
+        <h1>Welcome to the Community Wellness Program! Please register your information</h1>
+        <form class="slds-form--stacked">
+            <div class="slds-form-element slds-is-required">
+                <div class="slds-form-element__control">
+                    <ui:inputText aura:id="firstNameInput" label="First Name"
+                                  class="slds-input"
+                                  labelClass="slds-form-element__label"
+                                  value="{!v.firstName}"
+                                  required="true"
+                                  placeholder="First Name"
+                                  keyup="{!c.onKeyup}"/>
+                    <ui:inputText aura:id="lastNameInput" label="Last Name"
+                                  class="slds-input"
+                                  labelClass="slds-form-element__label"
+                                  value="{!v.lastName}"
+                                  required="true"
+                                  placeholder="Last Name"
+                                  keyup="{!c.onKeyup}"/>
+
+                    <ui:inputText aura:id="phoneNumberInput" label="Phone Number"
+                                  class="slds-input"
+                                  labelClass="slds-form-element__label"
+                                  value="{!v.phoneNumber}"
+                                  required="true"
+                                  placeholder="XXX-XXX-XXXX"
+                                  keyup="{!c.onKeyup}"/>
+
+                    <ui:inputText aura:id="emailInput" label="Email"
+                                  class="slds-input"
+                                  labelClass="slds-form-element__label"
+                                  value="{!v.email}"
+                                  required="true"
+                                  placeholder="name@example.com"
+                                  keyup="{!c.onKeyup}"/>
+
+                    <ui:inputDate aura:id="dateOfBirthInput" label="Date Of Birth: Month/Day/Year"
+                                  displayDatePicker="true"
+                                  class="slds-input"
+                                  labelClass="slds-form-element__label"
+                                  value="{!v.dateOfBirth}"
+                                  required="true"
+                                  keyup="{!c.onKeyup}"/>
+
+                    <ui:inputText aura:id="streetAddrInput" label="Street Address"
+                                  class="slds-input"
+                                  labelClass="slds-form-element__label"
+                                  value="{!v.streetAddr}"
+                                  required="true"
+                                  placeholder="123 Example St."
+                                  keyup="{!c.onKeyup}"/>
+
+                    <ui:inputText aura:id="cityInput" label="City"
+                                  class="slds-input"
+                                  labelClass="slds-form-element__label"
+                                  value="{!v.city}"
+                                  required="true"
+                                  placeholder="San Francisco"
+                                  keyup="{!c.onKeyup}"/>
+
+                    <ui:inputText aura:id="stateInput" label="State"
+                                  class="slds-input"
+                                  labelClass="slds-form-element__label"
+                                  value="{!v.state}"
+                                  required="true"
+                                  placeholder="California"
+                                  keyup="{!c.onKeyup}"/>
+
+                    <ui:inputText aura:id="zipcodeInput" label="Zipcode"
+                                  class="slds-input"
+                                  labelClass="slds-form-element__label"
+                                  value="{!v.zipcode}"
+                                  required="true"
+                                  placeholder="XXXXX"
+                                  keyup="{!c.onKeyup}"/>
+
+                    <ui:inputText aura:id="emergencyContactFullNameInput" label="Emergency Contact Full Name"
+                                  class="slds-input"
+                                  labelClass="slds-form-element__label"
+                                  value="{!v.emergencyContactFullName}"
+                                  required="true"
+                                  placeholder="Full Name"
+                                  keyup="{!c.onKeyup}"/>
+
+                    <ui:inputText aura:id="emergencyContactPhoneNumberInput" label="Emergency Contact Phone Number"
+                                  class="slds-input"
+                                  labelClass="slds-form-element__label"
+                                  value="{!v.emergencyContactPhoneNumber}"
+                                  required="true"
+                                  placeholder="XXX-XXX-XXXX"
+                                  keyup="{!c.onKeyup}"/>
+
+                    <!-- TODO: Ideally, we'd pop up multiple pages for the different classes of inputs -->
+                    <ui:inputSelect class="single" aura:id="genderSelection" label="Select your gender" change="{!c.onGenderSelectChange}">
+                        <aura:iteration items="{!v.genders}" var="gender">
+                            <ui:inputSelectOption text="{!gender}" label="{!gender}"/>
+                        </aura:iteration>
+                    </ui:inputSelect>
+                    <ui:inputSelect class="single" aura:id="raceSelection" label="Select your Race/Ethnicity" change="{!c.onRaceSelectChange}">
+                        <aura:iteration items="{!v.races}" var="race">
+                            <ui:inputSelectOption text="{!race}" label="{!race}"/>
+                        </aura:iteration>
+                    </ui:inputSelect>                                                                                                                                                                    
+                    <ui:inputSelect multiple="true" class="referralSourcesSelection" aura:id="referralSourcesSelection" label="How did you hear about SFGH?" change="{!c.onReferralSourcesSelectChange}">
+                        <aura:iteration items="{!v.referralSources}" var="referralSource">
+                            <ui:inputSelectOption text="{!referralSource}" label="{!referralSource}"/>
+                        </aura:iteration>
+                    </ui:inputSelect>
+                    <ui:inputSelect class="participantPositionSelection" multiple="true" aura:id="participantPositionSelection" label="I am a" change="{!c.onParticipantPositionSelectChange}">
+                        <aura:iteration items="{!v.participantPositions}" var="participantPosition">
+                            <ui:inputSelectOption text="{!participantPosition}" label="{!participantPosition}"/>
+                        </aura:iteration>
+                    </ui:inputSelect>
+                    <ui:inputSelect class="single" aura:id="preferredLanguageSelection" label="Preferred Language" change="{!c.onPreferredLanguageSelectChange}">
+                        <aura:iteration items="{!v.preferredLanguages}" var="preferredLanguage">
+                            <ui:inputSelectOption text="{!preferredLanguage}" label="{!preferredLanguage}"/>
+                        </aura:iteration>
+                    </ui:inputSelect>
+                    <ui:inputSelect class="single" aura:id="anyHealthConditionSelection" label="Do you currently have a health condition that you hope to improve through participating in the wellness program?" change="{!c.onAnyHealthConditionSelectChange}">
+                        <aura:iteration items="{!v.anyHealthConditions}" var="anyHealthCondition">
+                            <ui:inputSelectOption text="{!anyHealthCondition}" label="{!anyHealthCondition}"/>
+                        </aura:iteration>
+                    </ui:inputSelect>
+                    <ui:inputTextArea aura:id="healthConditionImproveInput" label="Please explain what you would like to improve"
+                                      class="slds-input"
+                                      labelClass="slds-form-element__label"
+                                      value="{!v.healthConditionImprove}"
+                                      required="false"
+                                      rows="5"
+                                      keyup="{!c.onKeyup}"/>
+                    <ui:inputSelect multiple="true" class="existingHealthConditionSelection" aura:id="existingHealthConditionSelection" label="Do you have?" change="{!c.onExistingHealthConditionSelectChange}">
+                        <aura:iteration items="{!v.existingHealthConditions}" var="existingHealthCondition">
+                            <ui:inputSelectOption text="{!existingHealthCondition}" label="{!existingHealthCondition}"/>
+                        </aura:iteration>
+                    </ui:inputSelect> 
+
+                    <ui:button label="Submit"
+                               class="slds-button slds-button--neutral"
+                               labelClass="label"
+                               press="{!c.doCreate}"/>
+                </div>
+            </div>
+        </form>
+
+        <lightning:spinner class="slds-hide" aura:id="spinner"/>
+
+        <div id="myModal" class="modal">
+            <div id="myModal" class="modal-content">
+                <div class="modal-header">
+                    <span class="modalClose">&times;</span>
+                    <p id="modalHeader">Modal Header</p>
+                </div>
+                <div class="modal-body">
+                    <p id="modalContent">Modal Body</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</aura:component>

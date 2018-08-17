@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2018, salesforce.com, inc.
+  ~ All rights reserved.
+  ~ Licensed under the BSD 3-Clause license.
+  ~ For full license text, see LICENSE.txt file in the repo root or
+  ~ https://opensource.org/licenses/BSD-3-Clause
+  -->
+
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Classes_Attended__c</fullName>
+    <externalId>false</externalId>
+    <label>Classes Attended</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bollywood</fullName>
+                <default>false</default>
+                <label>Bollywood</label>
+            </value>
+            <value>
+                <fullName>Chair Massage</fullName>
+                <default>false</default>
+                <label>Chair Massage</label>
+            </value>
+            <value>
+                <fullName>Chair Stretch &amp; Boogie</fullName>
+                <default>false</default>
+                <label>Chair Stretch &amp; Boogie</label>
+            </value>
+            <value>
+                <fullName>Cooking Demo</fullName>
+                <default>false</default>
+                <label>Cooking Demo</label>
+            </value>
+            <value>
+                <fullName>Hip-Hop Dance</fullName>
+                <default>false</default>
+                <label>Hip-Hop Dance</label>
+            </value>
+            <value>
+                <fullName>Salsa Dance</fullName>
+                <default>false</default>
+                <label>Salsa Dance</label>
+            </value>
+            <value>
+                <fullName>Strength Training</fullName>
+                <default>false</default>
+                <label>Strength Training</label>
+            </value>
+            <value>
+                <fullName>Yoga</fullName>
+                <default>false</default>
+                <label>Yoga</label>
+            </value>
+            <value>
+                <fullName>Zumba</fullName>
+                <default>false</default>
+                <label>Zumba</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>9</visibleLines>
+</CustomField>

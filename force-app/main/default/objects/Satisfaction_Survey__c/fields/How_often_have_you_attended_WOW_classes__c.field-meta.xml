@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2018, salesforce.com, inc.
+  ~ All rights reserved.
+  ~ Licensed under the BSD 3-Clause license.
+  ~ For full license text, see LICENSE.txt file in the repo root or
+  ~ https://opensource.org/licenses/BSD-3-Clause
+  -->
+
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_often_have_you_attended_WOW_classes__c</fullName>
+    <externalId>false</externalId>
+    <label>How many WOW classes have you attended?</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0 times</fullName>
+                <default>false</default>
+                <label>0 times</label>
+            </value>
+            <value>
+                <fullName>1-5 times</fullName>
+                <default>false</default>
+                <label>1-5 times</label>
+            </value>
+            <value>
+                <fullName>6-10 times</fullName>
+                <default>false</default>
+                <label>6-10 times</label>
+            </value>
+            <value>
+                <fullName>10-20 times</fullName>
+                <default>false</default>
+                <label>10-20 times</label>
+            </value>
+            <value>
+                <fullName>20+ times</fullName>
+                <default>false</default>
+                <label>20+ times</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

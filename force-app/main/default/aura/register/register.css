@@ -1,0 +1,121 @@
+/*
+ * Copyright (c) 2018, salesforce.com, inc.
+ * All rights reserved.
+ * Licensed under the BSD 3-Clause license.
+ * For full license text, see LICENSE.txt file in the repo root or
+ * https://opensource.org/licenses/BSD-3-Clause
+ */
+
+/* The Modal (background) */
+.THIS .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.THIS h1 {
+    font-size: 2.0rem;
+    color: #4E8290;
+}
+.THIS .uiLabel {
+    font-size: 1.5rem;
+    color: #4E8290;
+}
+
+.THIS .uiInput {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.THIS .uiInput .label {
+    font-size: 1.5rem;
+}
+
+.THIS .uiButton {
+    margin-top: 0.5rem;
+    padding: 1rem 1.25rem;
+}
+
+.THIS .uiButton .label {
+    font-size: 1.5rem;
+    color: #4E8290;
+}
+
+/* Modal Content */
+.THIS .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    font-size: 18px;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/* The Close Button */
+.THIS .modalClose {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.THIS .modalClose:hover,
+.THIS .modalClose:focus {
+    color:      #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Header */
+.THIS .modal-header {
+    padding: 12px 26px;
+    background-color: #5cb85c;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Modal Body */
+.THIS .modal-body {
+    padding: 12px 26px;
+}
+
+.THIS .existingHealthConditionSelection {
+    height: 100px;
+}
+
+.THIS .referralSourcesSelection {
+    height: 200px;
+}
+
+.THIS .participantPositionSelection {
+    height: 100px;
+}
+
+.THIS .enjoyableActivitiesSelection {
+    height: 100px;
+}

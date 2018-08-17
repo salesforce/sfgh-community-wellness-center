@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2018, salesforce.com, inc.
+  ~ All rights reserved.
+  ~ Licensed under the BSD 3-Clause license.
+  ~ For full license text, see LICENSE.txt file in the repo root or
+  ~ https://opensource.org/licenses/BSD-3-Clause
+  -->
+
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exercise_Level__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>你多久鍛煉一次？
+¿Con qué frecuencia hace ejercicio?</inlineHelpText>
+    <label>How often do you exercise?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I do not exercise</fullName>
+                <default>false</default>
+                <label>I do not exercise</label>
+            </value>
+            <value>
+                <fullName>1-2 times/week</fullName>
+                <default>false</default>
+                <label>1-2 times/week</label>
+            </value>
+            <value>
+                <fullName>3-4 times/week</fullName>
+                <default>false</default>
+                <label>3-4 times/week</label>
+            </value>
+            <value>
+                <fullName>5-7 times/week</fullName>
+                <default>false</default>
+                <label>5-7 times/week</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
